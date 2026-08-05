@@ -1,0 +1,20 @@
+# Operating System Files
+Thumbs.db
+desktop.ini
+.DS_Store
+*.stackdump
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary & Log Files
+*.log
+tmp/
+temp/
+
+# Environment Configuration
+.env
+.env.local
