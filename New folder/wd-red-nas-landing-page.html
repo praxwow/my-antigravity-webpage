@@ -171,10 +171,59 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 560px) { .nav-cta .btn { padding: 10px 16px; font-size: 13px; } }
 
 /* ==========================================
-   HERO &mdash; split layout
+   TOP BANNER (Top_image.jpg) — below header
+   ========================================== */
+.top-banner {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.top-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
+}
+.top-banner-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 900px;
+}
+.top-banner-content h1 {
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+  line-height: 1.05;
+}
+.top-banner-content p {
+  font-size: clamp(17px, 2.2vw, 24px);
+  font-weight: 500;
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+}
+
+/* ==========================================
+   HERO — split layout with WD_Red_Box.png
    ========================================== */
 .hero {
-  padding: 80px 0 0;
+  padding: 64px 0 72px;
   background: var(--white);
   overflow: hidden;
   position: relative;
@@ -184,11 +233,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: center;
-  min-height: 480px;
 }
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero { padding: 56px 0 0; }
+  .hero { padding: 48px 0; }
 }
 
 .hero-copy h1 {
@@ -218,7 +266,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero-trust {
   margin-top: 36px;
   display: flex;
-  gap: 28px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 .hero-trust-item {
@@ -234,91 +282,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero-visual {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-}
-.hero-img-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
 }
 .hero-device-img {
   width: 100%;
+  max-width: 580px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.14));
-  animation: heroFloat 6s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
 }
-@keyframes heroFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-.hero-badge {
-  position: absolute;
-  top: 42%;
-  left: -14%;
-  z-index: 2;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 12px 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  animation: badgePulse 4s ease-in-out infinite;
-}
-@keyframes badgePulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-}
-.hero-badge .badge-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 4px;
-}
-.hero-badge .badge-value {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--ink);
-  line-height: 1;
-}
-.hero-badge .badge-sub {
-  font-size: 11px;
-  color: var(--ink-soft);
-  margin-top: 2px;
-}
-.hero-badge-2 {
-  position: absolute;
-  bottom: 18%;
-  right: -6%;
-  z-index: 2;
-  background: var(--wd-red);
-  border-radius: var(--radius);
-  padding: 12px 16px;
-  box-shadow: 0 8px 24px rgba(200,16,46,0.28);
-  color: #fff;
-  animation: badgePulse 4s ease-in-out 2s infinite;
-}
-.hero-badge-2 .badge-label { color: rgba(255,255,255,0.75); margin-bottom: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-.hero-badge-2 .badge-value { font-size: 18px; font-weight: 800; line-height: 1.2; }
-@media (max-width: 860px) {
-  .hero-badge, .hero-badge-2 { display: none; }
-}
-@media (max-width: 560px) { .hero-device-img { max-width: 300px; margin: 0 auto; } }
 
 /* ==========================================
-   FEATURE BANNER (full-width)
+   2ND BANNER (2nd_banner_image.jpg) — after Hero
    ========================================== */
-.feature-banner {
+.second-banner {
   position: relative;
   width: 100%;
-  min-height: 460px;
+  min-height: 480px;
   overflow: hidden;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
-.feature-banner-img {
+.second-banner-img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -326,37 +312,36 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   object-fit: cover;
   object-position: center;
 }
-.feature-banner-overlay {
+.second-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(10,10,10,0.80) 0%, rgba(10,10,10,0.55) 50%, transparent 100%);
+  background: linear-gradient(90deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.50) 55%, transparent 100%);
 }
-.feature-banner-content {
+.second-banner-content {
   position: relative;
   z-index: 2;
   width: 100%;
   margin: 0 auto;
-  padding: 84px 40px 72px;
+  padding: 80px 40px;
   max-width: var(--maxw);
 }
 @media (max-width: 768px) {
-  .feature-banner-content { padding: 60px 20px; max-width: 100%; }
-  .feature-banner-overlay { background: rgba(10,10,10,0.68); }
+  .second-banner-content { padding: 60px 20px; }
+  .second-banner-overlay { background: rgba(10,10,10,0.72); }
 }
-.feature-banner-content .eyebrow { color: var(--wd-teal); }
-.feature-banner-content h2 {
-  font-size: clamp(26px, 3.5vw, 42px);
-  font-weight: 800;
+.second-banner-content h2 {
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 900;
   color: #fff;
-  margin-bottom: 16px;
-  max-width: 560px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
 }
-.feature-banner-content p {
+.second-banner-content p {
   font-size: 16px;
-  color: rgba(255,255,255,0.82);
+  color: rgba(255,255,255,0.88);
   line-height: 1.65;
-  margin-bottom: 32px;
-  max-width: 44ch;
+  max-width: 48ch;
 }
 
 /* ==========================================
@@ -950,7 +935,20 @@ footer {
 
 
 <!-- ================================================
-     HERO
+     TOP BANNER (Top_image.jpg) — below header
+     ================================================ -->
+<section class="top-banner" aria-label="Store Bindass banner">
+  <img src="../Top_image.jpg" alt="Store Bindass - Create your own Personal Cloud with WD Red NAS Drives" class="top-banner-img">
+  <div class="top-banner-overlay" aria-hidden="true"></div>
+  <div class="wrap top-banner-content">
+    <h1>Store Bindass</h1>
+    <p>Create your own Personal Cloud with WD Red NAS Drives.</p>
+  </div>
+</section>
+
+
+<!-- ================================================
+     HERO — WD_Red_Box.png on right side
      ================================================ -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="wrap hero-grid">
@@ -989,55 +987,36 @@ footer {
     </div>
 
     <div class="hero-visual reveal">
-      <div class="hero-img-wrap">
-        <div class="hero-badge" aria-hidden="true">
-          <div class="badge-label">Uptime Rated</div>
-          <div class="badge-value">24/7</div>
-          <div class="badge-sub">Continuous operation</div>
-        </div>
-
-        <img
-          src="../my-cloud-ex4100-Hero.png.thumb.1280.1280.png"
-          alt="WD My Cloud EX4100 NAS device with 4 drive bays"
-          class="hero-device-img"
-          width="520"
-          height="520"
-        >
-
-        <div class="hero-badge-2" aria-hidden="true">
-          <div class="badge-label">NAS drives</div>
-          <div class="badge-value">WD Red&reg; Pro</div>
-        </div>
-      </div>
+      <img
+        src="../WD_Red_Box.png"
+        alt="WD Red NAS Enclosure with WD Red Pro and WD Red Plus hard drives"
+        class="hero-device-img"
+      >
     </div>
   </div>
 </section>
 
 
 <!-- ================================================
-     FEATURE BANNER &mdash; full-width office/team image
+     2ND BANNER (2nd_banner_image.jpg) — after WD_Red_Box section
      ================================================ -->
-<div class="feature-banner" role="img" aria-label="Team collaborating in a modern office">
+<div class="second-banner" role="img" aria-label="Your Data Your Control banner">
   <img
-    src="../WD-Red-Pro-feature1.jpg.wdthumb.1280.1280.png"
-    alt="Creative team sharing project files using WD Red NAS storage"
-    class="feature-banner-img"
+    src="../2nd_banner_image.jpg"
+    alt="Your Data. Your Control. Centralise everything with a NAS powered by WD Red"
+    class="second-banner-img"
   >
-  <div class="feature-banner-overlay" aria-hidden="true"></div>
-  <div class="feature-banner-content wrap">
-    <span class="eyebrow">For every team</span>
-    <h2>Storage that keeps up with your workflow</h2>
+  <div class="second-banner-overlay" aria-hidden="true"></div>
+  <div class="second-banner-content wrap">
+    <h2>Your Data.<br>Your Control.</h2>
     <p>
-      Whether you're a freelancer juggling client projects or a growing team sharing files across the office,
-      WD Red NAS drives deliver the speed, reliability and capacity you need &mdash; every day.
+      Stop hunting across phones, laptops, USB drives and cloud accounts. Centralise everything with a NAS powered by WD Red &mdash; built for 24/7 reliability in homes, offices and creative studios.
     </p>
-    <a href="#get-advice" class="btn btn-outline-white">Find Your NAS Setup</a>
   </div>
 </div>
 
 
-<!-- ================================================
-     WHAT IS NAS
+<!-- ================================================\n     WHAT IS NAS
      ================================================ -->
 <section id="what-is-nas" class="section-what-is-nas" aria-labelledby="nas-heading">
   <div class="wrap">
