@@ -294,57 +294,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 /* ==========================================
-   2ND BANNER (2nd_banner_image.jpg) — after Hero
-   ========================================== */
-.second-banner {
-  position: relative;
-  width: 100%;
-  min-height: 480px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-.second-banner-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.second-banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.50) 55%, transparent 100%);
-}
-.second-banner-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  margin: 0 auto;
-  padding: 80px 40px;
-  max-width: var(--maxw);
-}
-@media (max-width: 768px) {
-  .second-banner-content { padding: 60px 20px; }
-  .second-banner-overlay { background: rgba(10,10,10,0.72); }
-}
-.second-banner-content h2 {
-  font-size: clamp(36px, 5vw, 60px);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.05;
-  margin-bottom: 20px;
-  letter-spacing: -0.025em;
-}
-.second-banner-content p {
-  font-size: 16px;
-  color: rgba(255,255,255,0.88);
-  line-height: 1.65;
-  max-width: 48ch;
-}
-
-/* ==========================================
    WHAT IS NAS SECTION
    ========================================== */
 .section-what-is-nas {
@@ -938,18 +887,10 @@ footer {
      TOP BANNER (Top_image.jpg) — below header
      ================================================ -->
 <section class="top-banner" aria-label="Store Bindass banner">
-  <img src="./Top_image.jpg" alt="Store Bindass - Create your own Personal Cloud with WD Red NAS Drives" class="top-banner-img">
-  <div class="top-banner-overlay" aria-hidden="true"></div>
-  <div class="wrap top-banner-content">
-    <h1>Store Bindass</h1>
-    <p>Create your own Personal Cloud with WD Red NAS Drives.</p>
-  </div>
+  <img src="./Top_image.jpg" alt="Store Bindass - Create your own Personal Cloud with WD Red NAS Drives" class="banner-responsive-img">
 </section>
 
 
-<!-- ================================================
-     HERO — WD_Red_Box.png on right side
-     ================================================ -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="wrap hero-grid">
     <div class="hero-copy">
