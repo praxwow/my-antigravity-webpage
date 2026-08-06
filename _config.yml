@@ -1,0 +1,5 @@
+theme: jekyll-theme-primer
+title: WD Red NAS Landing Page
+exclude:
+  - "*.zip"
+  - "*.pptx"
