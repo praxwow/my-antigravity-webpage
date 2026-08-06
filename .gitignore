@@ -15,6 +15,13 @@ desktop.ini
 tmp/
 temp/
 
-# Environment Configuration
-.env
-.env.local
+# Raw Design Files & Archives
+*.pptx
+*.zip
+New folder/
+
+# Raw Photo Uploads & Unused Assets
+75*.jpg
+my-cloud-ex4100-Hero*
+nas-product-qnap-red*
+WD-Red-Pro-feature1*
